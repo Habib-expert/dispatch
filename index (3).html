@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Dispatch Solutions | 24/7 B2B Trade Dispatch Backbone</title>
+    <meta name="description" content="Outsourced emergency trade dispatch backbone for UK & USA. Pay only per successful dispatch. Commercial partnership, no equity required.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        navy: { 800: '#0f172a', 900: '#020617' },
+                        brand: { blue: '#2563eb', red: '#dc2626' }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Premium Styles */
+        body { font-family: 'Inter', sans-serif; }
+        
+        .hero-pattern {
+            background-color: #0f172a;
+            background-image: radial-gradient(#1e293b 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .tech-line {
+            position: absolute;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), transparent);
+            width: 100%;
+        }
+
+        /* Modal Styles */
+        .modal {
+            transition: opacity 0.25s ease;
+        }
+        body.modal-active {
+            overflow-x: hidden;
+            overflow-y: hidden !important;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-200">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-2.5">
+                    <i class="fa-solid fa-headset text-3xl text-navy-900"></i>
+                    <span class="text-2xl font-extrabold text-navy-900 tracking-tight leading-none">
+                        PrimeDispatch<span class="text-blue-600">Solutions</span>
+                    </span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#workflow" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Workflow</a>
+                    <a href="#services" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Services</a>
+                    <a href="#pricing" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Pricing</a>
+                    <a href="#contact" class="px-5 py-2.5 bg-navy-900 text-white text-sm font-semibold rounded-full hover:bg-blue-700 transition shadow-lg shadow-blue-900/20">
+                        Start Pilot
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-pattern">
+        <div class="tech-line top-1/4 opacity-20"></div>
+        <div class="tech-line top-2/3 opacity-20"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-200 text-xs font-semibold uppercase tracking-wider mb-8 backdrop-blur-sm">
+                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                Commercial B2B Service Partnership
+            </div>
+
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-tight mb-6">
+                Never Miss an <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Emergency Lead</span> Again
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-lg md:text-xl text-slate-400 mb-2 font-light">
+                24/7 Outsourced Trade Dispatch Backbone for UK & USA Home-Service Companies.
+            </p>
+            
+            <p class="text-sm text-slate-500 mb-10 font-medium">
+                No Equity • No Ownership • Pay Only Per Successful Dispatch
+            </p>
+            
+            <div class="hidden md:flex justify-center gap-2 text-xs text-slate-400 mb-8 opacity-75">
+                <span class="px-2 py-1 bg-slate-800 rounded">Answer Calls</span>
+                <i class="fa-solid fa-arrow-right self-center"></i>
+                <span class="px-2 py-1 bg-slate-800 rounded">Smart Dispatch</span>
+                <i class="fa-solid fa-arrow-right self-center"></i>
+                <span class="px-2 py-1 bg-slate-800 rounded">ETA SMS</span>
+                <i class="fa-solid fa-arrow-right self-center"></i>
+                <span class="px-2 py-1 bg-slate-800 rounded">KPI Reports</span>
+            </div>
+
+            <div class="flex flex-col items-center gap-6">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-red-600 to-orange-600 rounded-full blur opacity-40 group-hover:opacity-75 transition duration-200 animate-pulse-slow"></div>
+                    <button onclick="document.getElementById('contact').scrollIntoView()" class="relative px-8 py-4 bg-brand-red text-white text-lg font-bold rounded-full hover:bg-red-700 transition shadow-xl flex items-center gap-3">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        Start 45-Day Dispatch Pilot
+                    </button>
+                </div>
+
+                <div class="flex gap-6 text-slate-500 text-xl mt-4 border-t border-slate-800 pt-6">
+                    <i class="fa-solid fa-wrench" title="General Repair"></i>
+                    <i class="fa-solid fa-faucet-drip" title="Plumbing"></i>
+                    <i class="fa-solid fa-fire-flame-curved" title="Heating/Boilers"></i>
+                    <i class="fa-solid fa-bolt" title="Electrical"></i>
+                    <i class="fa-solid fa-key" title="Locksmith"></i>
+                    <i class="fa-regular fa-snowflake text-blue-400" title="Winter Peak Ready"></i>
+                </div>
+            </div>
+            
+            <div class="absolute top-10 right-10 text-slate-800 text-9xl opacity-5 pointer-events-none hidden lg:block">
+                <i class="fa-solid fa-headset"></i>
+            </div>
+        </div>
+    </header>
+
+    <section id="pricing" class="relative -mt-10 z-20 max-w-5xl mx-auto px-4">
+        <div class="glass-panel shadow-2xl rounded-2xl p-8 md:p-10 border-t-4 border-blue-600">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-center divide-y md:divide-y-0 md:divide-x divide-slate-200">
+                
+                <div class="p-4">
+                    <div class="flex justify-center items-center gap-2 mb-2">
+                        <img src="https://flagcdn.com/w40/gb.png" alt="UK" class="h-5 rounded-sm shadow-sm">
+                        <span class="text-sm font-bold text-slate-500 uppercase tracking-widest">United Kingdom</span>
+                    </div>
+                    <div class="text-5xl font-extrabold text-navy-900">£15</div>
+                    <div class="text-sm font-medium text-slate-500 mt-2">Per Successful Dispatch</div>
+                </div>
+
+                <div class="p-4">
+                    <div class="flex justify-center items-center gap-2 mb-2">
+                        <img src="https://flagcdn.com/w40/us.png" alt="USA" class="h-5 rounded-sm shadow-sm">
+                        <span class="text-sm font-bold text-slate-500 uppercase tracking-widest">United States</span>
+                    </div>
+                    <div class="text-5xl font-extrabold text-navy-900">$18</div>
+                    <div class="text-sm font-medium text-slate-500 mt-2">Per Successful Dispatch</div>
+                </div>
+
+                <div class="p-4 text-left md:pl-8">
+                    <h3 class="font-bold text-slate-800 text-lg mb-2">Zero Risk Model</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Partners keep 100% of the job revenue. You only pay us specifically when we successfully dispatch a technician. <span class="font-bold text-blue-600">No monthly retainers. No hourly costs.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Why Trade Companies Lose Revenue</h2>
+                <p class="text-slate-600 text-lg">The "Death Zone" for service companies is 5:00 PM to 8:00 AM.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-phone-slash"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Missed After-Hours Calls</h3>
+                    <p class="text-slate-600">UK & US SMBs miss 30–60% of emergency revenue because calls go to voicemail. Voicemail doesn't pay the bills.</p>
+                </div>
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-battery-empty"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Owner Burnout</h3>
+                    <p class="text-slate-600">During winter peaks, owners are overwhelmed trying to answer phones while managing field teams.</p>
+                </div>
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:shadow-lg transition">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">No Dispatch Backbone</h3>
+                    <p class="text-slate-600">Without a smart routing team, leads are wasted on technicians who are too far away or unqualified.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="workflow" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(#334155 1px, transparent 1px), linear-gradient(90deg, #334155 1px, transparent 1px); background-size: 40px 40px;"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-blue-400 font-bold uppercase tracking-widest text-xs">Operational Flow</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Seamless CRM Integration</h2>
+                <p class="text-slate-400 mt-4 max-w-2xl mx-auto">We act as a ghostly extension of your office. Your customers never know we are outsourced.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-6 relative">
+                <div class="hidden md:block absolute top-12 left-0 w-full h-1 bg-slate-700 -z-10"></div>
+
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 text-center relative">
+                    <div class="w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
+                    <h4 class="font-bold text-lg mb-2">Call Arrives</h4>
+                    <p class="text-sm text-slate-400">Intake agent answers as your company.</p>
+                </div>
+
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 text-center relative">
+                    <div class="w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
+                    <h4 class="font-bold text-lg mb-2">CRM Entry</h4>
+                    <p class="text-sm text-slate-400">Job created in your CRM.</p>
+                </div>
+
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 text-center relative">
+                    <div class="w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
+                    <h4 class="font-bold text-lg mb-2">Smart Dispatch</h4>
+                    <p class="text-sm text-slate-400">Nearest tech assigned + ETA SMS.</p>
+                </div>
+
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 text-center relative">
+                    <div class="w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">4</div>
+                    <h4 class="font-bold text-lg mb-2">Job Done</h4>
+                    <p class="text-sm text-slate-400">Tech completes job; proof logged.</p>
+                </div>
+
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 text-center relative">
+                    <div class="w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">5</div>
+                    <h4 class="font-bold text-lg mb-2">Reporting</h4>
+                    <p class="text-sm text-slate-400">Daily KPI & billing file delivered.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <section id="services" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">Services We Dispatch</h2>
+                <p class="text-slate-600 mt-2">Click any service to inquire via WhatsApp.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                <a href="https://wa.me/1234567890?text=I%20need%20dispatch%20for%20Boiler%20Repair" class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition text-center">
+                    <i class="fa-solid fa-fire text-3xl text-orange-500 mb-3 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold text-slate-800">Boiler & Heating</h3>
+                </a>
+                <a href="https://wa.me/1234567890?text=I%20need%20dispatch%20for%20Plumbing" class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition text-center">
+                    <i class="fa-solid fa-faucet text-3xl text-blue-500 mb-3 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold text-slate-800">Emergency Plumbing</h3>
+                </a>
+                <a href="https://wa.me/1234567890?text=I%20need%20dispatch%20for%20Electrical" class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition text-center">
+                    <i class="fa-solid fa-bolt text-3xl text-yellow-500 mb-3 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold text-slate-800">Electrical</h3>
+                </a>
+                <a href="https://wa.me/1234567890?text=I%20need%20dispatch%20for%20Locksmith" class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition text-center">
+                    <i class="fa-solid fa-key text-3xl text-slate-500 mb-3 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold text-slate-800">Locksmith</h3>
+                </a>
+                <a href="https://wa.me/1234567890?text=I%20need%20dispatch%20for%20Drainage" class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition text-center">
+                    <i class="fa-solid fa-water text-3xl text-cyan-600 mb-3 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold text-slate-800">Drain Unblocking</h3>
+                </a>
+                <a href="https://wa.me/1234567890?text=I%20need%20dispatch%20for%20HVAC" class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition text-center">
+                    <i class="fa-solid fa-fan text-3xl text-blue-400 mb-3 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold text-slate-800">HVAC / AC</h3>
+                </a>
+                <a href="https://wa.me/1234567890?text=I%20need%20dispatch%20for%20Appliances" class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition text-center">
+                    <i class="fa-solid fa-plug text-3xl text-green-500 mb-3 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold text-slate-800">Appliance Repair</h3>
+                </a>
+                <a href="https://wa.me/1234567890?text=I%20need%20dispatch%20for%20Water%20Damage" class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition text-center">
+                    <i class="fa-solid fa-house-flood-water text-3xl text-indigo-500 mb-3 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold text-slate-800">Water Restoration</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-slate-900 mb-12">Partnership FAQ</h2>
+            
+            <div class="space-y-4">
+                <div class="border border-slate-200 rounded-lg p-6 bg-slate-50">
+                    <h3 class="font-bold text-slate-900 flex items-center gap-2">
+                        <i class="fa-regular fa-circle-question text-blue-600"></i>
+                        Is this an equity partnership?
+                    </h3>
+                    <p class="mt-2 text-slate-600 ml-6">No. This is purely a commercial B2B service agreement. You retain 100% ownership of your company. We function as a service provider.</p>
+                </div>
+                <div class="border border-slate-200 rounded-lg p-6 bg-slate-50">
+                    <h3 class="font-bold text-slate-900 flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-blue-600"></i>
+                        Who handles field liability?
+                    </h3>
+                    <p class="mt-2 text-slate-600 ml-6">Your company retains all liability for fieldwork, insurance, and technician conduct. Prime Dispatch Solutions handles the digital coordination only.</p>
+                </div>
+                <div class="border border-slate-200 rounded-lg p-6 bg-slate-50">
+                    <h3 class="font-bold text-slate-900 flex items-center gap-2">
+                        <i class="fa-solid fa-stopwatch text-blue-600"></i>
+                        What is your SLA on call answering?
+                    </h3>
+                    <p class="mt-2 text-slate-600 ml-6">We aim for a 90% answer rate within 3 rings. All calls are recorded for quality assurance.</p>
+                </div>
+            </div>
+
+            <div class="mt-16 pt-16 border-t border-slate-100 text-center">
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Trusted By Trade Companies in</span>
+                <div class="flex justify-center items-center gap-8 mt-4 opacity-60 grayscale">
+                    <div class="text-xl font-bold text-slate-400 flex items-center gap-2"><img src="https://flagcdn.com/w20/gb.png" alt="UK"> UK Wide</div>
+                    <div class="h-4 w-px bg-slate-300"></div>
+                    <div class="text-xl font-bold text-slate-400 flex items-center gap-2"><img src="https://flagcdn.com/w20/us.png" alt="USA"> USA Wide</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-navy-900 relative">
+        <div class="absolute inset-0 bg-blue-900/20"></div>
+        
+        <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                <div class="bg-gradient-to-r from-blue-900 to-navy-900 p-8 text-white text-center">
+                    <h2 class="text-3xl font-bold">Start Your 45-Day Dispatch Pilot</h2>
+                    <p class="text-blue-200 mt-2">Commercial Partnership Inquiry. No credit card required.</p>
+                </div>
+                
+                <div class="p-8 md:p-12">
+                    <form id="whatsappForm" onsubmit="sendToWhatsApp(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Full Name</label>
+                                <input type="text" id="fullName" placeholder="John Smith" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Company Name</label>
+                                <input type="text" id="companyName" placeholder="Smith & Sons Heating" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Service Needed</label>
+                                <select id="serviceNeeded" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition">
+                                    <option>Boiler & Heating</option>
+                                    <option>Plumbing</option>
+                                    <option>Electrical</option>
+                                    <option>Locksmith</option>
+                                    <option>HVAC / AC</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">City/Region</label>
+                                <input type="text" id="region" placeholder="e.g. Manchester or Dallas" required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="+44 7..." required class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Message</label>
+                            <textarea id="message" rows="3" placeholder="Tell us about your current volume and CRM..." class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-xl shadow-lg transition transform hover:-translate-y-1 flex items-center justify-center gap-3 text-lg">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            Send to WhatsApp (Instant)
+                        </button>
+                        <p class="text-center text-xs text-slate-400 mt-4">
+                            By clicking send, you agree to discuss a commercial service agreement.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-navy-900 border-t border-slate-800 text-slate-400 py-12 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
+                <div class="text-center md:text-left">
+                    <span class="block font-bold text-white text-lg mb-1">Prime Dispatch Solutions</span>
+                    <span class="block text-slate-500">24/7 Remote Dispatch Backbone (UK & USA)</span>
+                </div>
+                <div class="flex gap-6">
+                    <button onclick="toggleModal('termsModal')" class="hover:text-white transition">Terms of Service</button>
+                    <button onclick="toggleModal('privacyModal')" class="hover:text-white transition">Privacy Policy</button>
+                    <button onclick="toggleModal('dataModal')" class="hover:text-white transition">Data Processing</button>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 text-center text-xs text-slate-600">
+                <p>&copy; 2026 Prime Dispatch Solutions – All Rights Reserved</p>
+                <p class="mt-2">Founded by Habib Ullah</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/1234567890" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 hover:scale-110 transition z-50 flex items-center justify-center">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <div id="termsModal" class="modal fixed inset-0 z-[60] hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="toggleModal('termsModal')"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-full max-w-2xl max-h-[80vh] overflow-y-auto rounded-xl p-8 shadow-2xl">
+            <h3 class="text-2xl font-bold text-navy-900 mb-4">Terms of Service</h3>
+            <div class="prose text-sm text-slate-600 space-y-4">
+                <p><strong>1. Service Agreement:</strong> Prime Dispatch Solutions acts solely as a communication and dispatch intermediary. We do not provide physical trade services.</p>
+                <p><strong>2. Liability:</strong> The Partner Company retains full liability for all field operations, technician safety, and workmanship.</p>
+                <p><strong>3. Payment:</strong> Fees are charged per successful dispatch event as defined in the commercial agreement ($18 USD / £15 GBP).</p>
+            </div>
+            <button onclick="toggleModal('termsModal')" class="mt-6 px-6 py-2 bg-navy-900 text-white rounded-lg hover:bg-blue-800">Close</button>
+        </div>
+    </div>
+
+    <div id="privacyModal" class="modal fixed inset-0 z-[60] hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="toggleModal('privacyModal')"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-full max-w-2xl max-h-[80vh] overflow-y-auto rounded-xl p-8 shadow-2xl">
+            <h3 class="text-2xl font-bold text-navy-900 mb-4">Privacy Policy</h3>
+            <div class="prose text-sm text-slate-600 space-y-4">
+                <p>We respect your privacy. All call logs and customer data are processed securely solely for the purpose of dispatching technicians. We do not sell data to third parties.</p>
+            </div>
+            <button onclick="toggleModal('privacyModal')" class="mt-6 px-6 py-2 bg-navy-900 text-white rounded-lg hover:bg-blue-800">Close</button>
+        </div>
+    </div>
+
+    <div id="dataModal" class="modal fixed inset-0 z-[60] hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="toggleModal('dataModal')"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-full max-w-2xl max-h-[80vh] overflow-y-auto rounded-xl p-8 shadow-2xl">
+            <h3 class="text-2xl font-bold text-navy-900 mb-4">Data Processing Policy</h3>
+            <div class="prose text-sm text-slate-600 space-y-4">
+                <p>Prime Dispatch Solutions complies with UK GDPR and US Data Privacy laws. We act as a Data Processor on behalf of the Partner Company (Data Controller).</p>
+            </div>
+            <button onclick="toggleModal('dataModal')" class="mt-6 px-6 py-2 bg-navy-900 text-white rounded-lg hover:bg-blue-800">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // 1. WhatsApp Redirection Logic
+        function sendToWhatsApp(event) {
+            event.preventDefault();
+
+            // REPLACE THIS NUMBER WITH YOUR OWN (International format, no +)
+            const myPhoneNumber = "1234567890"; 
+
+            const fullName = document.getElementById('fullName').value;
+            const companyName = document.getElementById('companyName').value;
+            const service = document.getElementById('serviceNeeded').value;
+            const region = document.getElementById('region').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            // Strict Formatting
+            const formattedMessage = 
+`Hello, this is *${fullName}*
+I represent *${companyName}*
+Service needed: *${service}*
+City/Region: *${region}*
+Phone: *${phone}*
+Message: *${message}*
+Looking forward to your 24/7 dispatch support.`;
+
+            const url = `https://wa.me/${myPhoneNumber}?text=${encodeURIComponent(formattedMessage)}`;
+            window.open(url, '_blank');
+        }
+
+        // 2. Modal Logic
+        function toggleModal(modalId) {
+            const modal = document.getElementById(modalId);
+            const body = document.body;
+            
+            if (modal.classList.contains('hidden')) {
+                // Open modal
+                modal.classList.remove('hidden');
+                // Small delay to allow display:block to take effect before adding opacity class for transition
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    body.classList.add('modal-active');
+                }, 10);
+            } else {
+                // Close modal
+                modal.classList.add('opacity-0');
+                body.classList.remove('modal-active');
+                // Wait for transition to finish before hiding
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 250); // Match transition duration in CSS
+            }
+        }
+
+        // Close modal when pressing Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const openModals = document.querySelectorAll('.modal:not(.hidden)');
+                openModals.forEach(modal => {
+                    toggleModal(modal.id);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
