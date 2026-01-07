@@ -69,10 +69,11 @@
             <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center gap-2.5">
                     <i class="fa-solid fa-headset text-3xl text-navy-900"></i>
-                    <span class="text-2xl font-extrabold text-navy-900 tracking-tight leading-none">
+                    <span class="text-xl md:text-2xl font-extrabold text-navy-900 tracking-tight leading-none">
                         PrimeDispatch<span class="text-blue-600">Solutions</span>
                     </span>
                 </div>
+
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="#workflow" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Workflow</a>
                     <a href="#services" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition">Services</a>
@@ -81,11 +82,26 @@
                         Start Pilot
                     </a>
                 </div>
+
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="text-slate-800 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-b border-slate-200 shadow-xl z-40">
+            <div class="flex flex-col p-6 space-y-4">
+                <a href="#workflow" onclick="toggleMobileMenu()" class="text-lg font-medium text-slate-700 py-2 border-b border-slate-100">Workflow</a>
+                <a href="#services" onclick="toggleMobileMenu()" class="text-lg font-medium text-slate-700 py-2 border-b border-slate-100">Services</a>
+                <a href="#pricing" onclick="toggleMobileMenu()" class="text-lg font-medium text-slate-700 py-2 border-b border-slate-100">Pricing</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="text-lg font-bold text-blue-600 py-2">Start Pilot</a>
             </div>
         </div>
     </nav>
 
-    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-pattern">
+    <header class="relative pt-32 pb-16 lg:pt-48 lg:pb-32 overflow-hidden hero-pattern">
         <div class="tech-line top-1/4 opacity-20"></div>
         <div class="tech-line top-2/3 opacity-20"></div>
 
@@ -101,11 +117,11 @@
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Emergency Lead</span> Again
             </h1>
 
-            <p class="max-w-2xl mx-auto text-lg md:text-xl text-slate-400 mb-2 font-light">
+            <p class="max-w-2xl mx-auto text-lg md:text-xl text-slate-400 mb-2 font-light px-2">
                 24/7 Outsourced Trade Dispatch Backbone for UK & USA Home-Service Companies.
             </p>
             
-            <p class="text-sm text-slate-500 mb-10 font-medium">
+            <p class="text-sm text-slate-500 mb-10 font-medium px-2">
                 No Equity • No Ownership • Pay Only Per Successful Dispatch
             </p>
             
@@ -120,15 +136,15 @@
             </div>
 
             <div class="flex flex-col items-center gap-6">
-                <div class="relative group">
+                <div class="relative group w-full max-w-sm px-4">
                     <div class="absolute -inset-1 bg-gradient-to-r from-red-600 to-orange-600 rounded-full blur opacity-40 group-hover:opacity-75 transition duration-200 animate-pulse-slow"></div>
-                    <button onclick="document.getElementById('contact').scrollIntoView()" class="relative px-8 py-4 bg-brand-red text-white text-lg font-bold rounded-full hover:bg-red-700 transition shadow-xl flex items-center gap-3">
+                    <button onclick="document.getElementById('contact').scrollIntoView()" class="w-full relative px-6 py-4 bg-brand-red text-white text-lg font-bold rounded-full hover:bg-red-700 transition shadow-xl flex items-center justify-center gap-3">
                         <i class="fa-brands fa-whatsapp text-2xl"></i>
                         Start 45-Day Dispatch Pilot
                     </button>
                 </div>
 
-                <div class="flex gap-6 text-slate-500 text-xl mt-4 border-t border-slate-800 pt-6">
+                <div class="flex flex-wrap justify-center gap-4 md:gap-6 text-slate-500 text-xl mt-4 border-t border-slate-800 pt-6 px-4">
                     <i class="fa-solid fa-wrench" title="General Repair"></i>
                     <i class="fa-solid fa-faucet-drip" title="Plumbing"></i>
                     <i class="fa-solid fa-fire-flame-curved" title="Heating/Boilers"></i>
@@ -145,10 +161,10 @@
     </header>
 
     <section id="pricing" class="relative -mt-10 z-20 max-w-5xl mx-auto px-4">
-        <div class="glass-panel shadow-2xl rounded-2xl p-8 md:p-10 border-t-4 border-blue-600">
+        <div class="glass-panel shadow-2xl rounded-2xl p-6 md:p-10 border-t-4 border-blue-600">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-center divide-y md:divide-y-0 md:divide-x divide-slate-200">
                 
-                <div class="p-4">
+                <div class="p-4 pt-0 md:pt-4">
                     <div class="flex justify-center items-center gap-2 mb-2">
                         <img src="https://flagcdn.com/w40/gb.png" alt="UK" class="h-5 rounded-sm shadow-sm">
                         <span class="text-sm font-bold text-slate-500 uppercase tracking-widest">United Kingdom</span>
@@ -167,8 +183,8 @@
                 </div>
 
                 <div class="p-4 text-left md:pl-8">
-                    <h3 class="font-bold text-slate-800 text-lg mb-2">Zero Risk Model</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">
+                    <h3 class="font-bold text-slate-800 text-lg mb-2 text-center md:text-left">Zero Risk Model</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed text-center md:text-left">
                         Partners keep 100% of the job revenue. You only pay us specifically when we successfully dispatch a technician. <span class="font-bold text-blue-600">No monthly retainers. No hourly costs.</span>
                     </p>
                 </div>
@@ -176,9 +192,9 @@
         </div>
     </section>
 
-    <section class="py-24 bg-white">
+    <section class="py-16 lg:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Why Trade Companies Lose Revenue</h2>
                 <p class="text-slate-600 text-lg">The "Death Zone" for service companies is 5:00 PM to 8:00 AM.</p>
             </div>
@@ -209,11 +225,11 @@
         </div>
     </section>
 
-    <section id="workflow" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+    <section id="workflow" class="py-16 lg:py-24 bg-slate-900 text-white relative overflow-hidden">
         <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(#334155 1px, transparent 1px), linear-gradient(90deg, #334155 1px, transparent 1px); background-size: 40px 40px;"></div>
         
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-12 lg:mb-16">
                 <span class="text-blue-400 font-bold uppercase tracking-widest text-xs">Operational Flow</span>
                 <h2 class="text-3xl md:text-4xl font-bold mt-2">Seamless CRM Integration</h2>
                 <p class="text-slate-400 mt-4 max-w-2xl mx-auto">We act as a ghostly extension of your office. Your customers never know we are outsourced.</p>
@@ -255,51 +271,51 @@
         </div>
     </section>
 
-   <section id="services" class="py-24 bg-slate-50">
+   <section id="services" class="py-16 lg:py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-12 lg:mb-16">
                 <h2 class="text-3xl font-bold text-slate-900">Services We Dispatch</h2>
                 <p class="text-slate-600 mt-2">Click any service to inquire via WhatsApp.</p>
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-                <a href="https://wa.me/1234567890?text=I%20need%20dispatch%20for%20Boiler%20Repair" class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition text-center">
-                    <i class="fa-solid fa-fire text-3xl text-orange-500 mb-3 group-hover:scale-110 transition"></i>
-                    <h3 class="font-semibold text-slate-800">Boiler & Heating</h3>
+                <a href="https://wa.me/1234567890?text=I%20need%20dispatch%20for%20Boiler%20Repair" class="group bg-white p-4 lg:p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition text-center">
+                    <i class="fa-solid fa-fire text-2xl lg:text-3xl text-orange-500 mb-3 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold text-sm lg:text-base text-slate-800">Boiler & Heating</h3>
                 </a>
-                <a href="https://wa.me/1234567890?text=I%20need%20dispatch%20for%20Plumbing" class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition text-center">
-                    <i class="fa-solid fa-faucet text-3xl text-blue-500 mb-3 group-hover:scale-110 transition"></i>
-                    <h3 class="font-semibold text-slate-800">Emergency Plumbing</h3>
+                <a href="https://wa.me/1234567890?text=I%20need%20dispatch%20for%20Plumbing" class="group bg-white p-4 lg:p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition text-center">
+                    <i class="fa-solid fa-faucet text-2xl lg:text-3xl text-blue-500 mb-3 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold text-sm lg:text-base text-slate-800">Emergency Plumbing</h3>
                 </a>
-                <a href="https://wa.me/1234567890?text=I%20need%20dispatch%20for%20Electrical" class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition text-center">
-                    <i class="fa-solid fa-bolt text-3xl text-yellow-500 mb-3 group-hover:scale-110 transition"></i>
-                    <h3 class="font-semibold text-slate-800">Electrical</h3>
+                <a href="https://wa.me/1234567890?text=I%20need%20dispatch%20for%20Electrical" class="group bg-white p-4 lg:p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition text-center">
+                    <i class="fa-solid fa-bolt text-2xl lg:text-3xl text-yellow-500 mb-3 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold text-sm lg:text-base text-slate-800">Electrical</h3>
                 </a>
-                <a href="https://wa.me/1234567890?text=I%20need%20dispatch%20for%20Locksmith" class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition text-center">
-                    <i class="fa-solid fa-key text-3xl text-slate-500 mb-3 group-hover:scale-110 transition"></i>
-                    <h3 class="font-semibold text-slate-800">Locksmith</h3>
+                <a href="https://wa.me/1234567890?text=I%20need%20dispatch%20for%20Locksmith" class="group bg-white p-4 lg:p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition text-center">
+                    <i class="fa-solid fa-key text-2xl lg:text-3xl text-slate-500 mb-3 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold text-sm lg:text-base text-slate-800">Locksmith</h3>
                 </a>
-                <a href="https://wa.me/1234567890?text=I%20need%20dispatch%20for%20Drainage" class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition text-center">
-                    <i class="fa-solid fa-water text-3xl text-cyan-600 mb-3 group-hover:scale-110 transition"></i>
-                    <h3 class="font-semibold text-slate-800">Drain Unblocking</h3>
+                <a href="https://wa.me/1234567890?text=I%20need%20dispatch%20for%20Drainage" class="group bg-white p-4 lg:p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition text-center">
+                    <i class="fa-solid fa-water text-2xl lg:text-3xl text-cyan-600 mb-3 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold text-sm lg:text-base text-slate-800">Drain Unblocking</h3>
                 </a>
-                <a href="https://wa.me/1234567890?text=I%20need%20dispatch%20for%20HVAC" class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition text-center">
-                    <i class="fa-solid fa-fan text-3xl text-blue-400 mb-3 group-hover:scale-110 transition"></i>
-                    <h3 class="font-semibold text-slate-800">HVAC / AC</h3>
+                <a href="https://wa.me/1234567890?text=I%20need%20dispatch%20for%20HVAC" class="group bg-white p-4 lg:p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition text-center">
+                    <i class="fa-solid fa-fan text-2xl lg:text-3xl text-blue-400 mb-3 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold text-sm lg:text-base text-slate-800">HVAC / AC</h3>
                 </a>
-                <a href="https://wa.me/1234567890?text=I%20need%20dispatch%20for%20Appliances" class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition text-center">
-                    <i class="fa-solid fa-plug text-3xl text-green-500 mb-3 group-hover:scale-110 transition"></i>
-                    <h3 class="font-semibold text-slate-800">Appliance Repair</h3>
+                <a href="https://wa.me/1234567890?text=I%20need%20dispatch%20for%20Appliances" class="group bg-white p-4 lg:p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition text-center">
+                    <i class="fa-solid fa-plug text-2xl lg:text-3xl text-green-500 mb-3 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold text-sm lg:text-base text-slate-800">Appliance Repair</h3>
                 </a>
-                <a href="https://wa.me/1234567890?text=I%20need%20dispatch%20for%20Water%20Damage" class="group bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition text-center">
-                    <i class="fa-solid fa-house-flood-water text-3xl text-indigo-500 mb-3 group-hover:scale-110 transition"></i>
-                    <h3 class="font-semibold text-slate-800">Water Restoration</h3>
+                <a href="https://wa.me/1234567890?text=I%20need%20dispatch%20for%20Water%20Damage" class="group bg-white p-4 lg:p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition text-center">
+                    <i class="fa-solid fa-house-flood-water text-2xl lg:text-3xl text-indigo-500 mb-3 group-hover:scale-110 transition"></i>
+                    <h3 class="font-semibold text-sm lg:text-base text-slate-800">Water Restoration</h3>
                 </a>
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-white border-t border-slate-100">
+    <section class="py-16 lg:py-24 bg-white border-t border-slate-100">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center text-slate-900 mb-12">Partnership FAQ</h2>
             
@@ -338,17 +354,17 @@
         </div>
     </section>
 
-    <section id="contact" class="py-24 bg-navy-900 relative">
+    <section id="contact" class="py-16 lg:py-24 bg-navy-900 relative">
         <div class="absolute inset-0 bg-blue-900/20"></div>
         
         <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
                 <div class="bg-gradient-to-r from-blue-900 to-navy-900 p-8 text-white text-center">
-                    <h2 class="text-3xl font-bold">Start Your 45-Day Dispatch Pilot</h2>
+                    <h2 class="text-2xl md:text-3xl font-bold">Start Your 45-Day Dispatch Pilot</h2>
                     <p class="text-blue-200 mt-2">Commercial Partnership Inquiry. No credit card required.</p>
                 </div>
                 
-                <div class="p-8 md:p-12">
+                <div class="p-6 md:p-12">
                     <form id="whatsappForm" onsubmit="sendToWhatsApp(event)" class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
@@ -409,7 +425,7 @@
                     <span class="block font-bold text-white text-lg mb-1">Prime Dispatch Solutions</span>
                     <span class="block text-slate-500">24/7 Remote Dispatch Backbone (UK & USA)</span>
                 </div>
-                <div class="flex gap-6">
+                <div class="flex flex-wrap justify-center gap-6">
                     <button onclick="toggleModal('termsModal')" class="hover:text-white transition">Terms of Service</button>
                     <button onclick="toggleModal('privacyModal')" class="hover:text-white transition">Privacy Policy</button>
                     <button onclick="toggleModal('dataModal')" class="hover:text-white transition">Data Processing</button>
@@ -490,7 +506,13 @@ Looking forward to your 24/7 dispatch support.`;
             window.open(url, '_blank');
         }
 
-        // 2. Modal Logic
+        // 2. Mobile Menu Logic (NEW)
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // 3. Modal Logic
         function toggleModal(modalId) {
             const modal = document.getElementById(modalId);
             const body = document.body;
